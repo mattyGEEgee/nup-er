@@ -1,0 +1,12 @@
+#language-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+#response-message {
+    color: red;
+}
+
+label:has(> input[type="checkbox"]:disabled) {
+    color: darkgrey
+}

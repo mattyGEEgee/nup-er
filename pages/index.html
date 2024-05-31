@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>nup-er</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app">
+            <label>
+                API Key
+                <input type="text" name="azure-api-key" id="azure-api-key">
+            </label>
+            <fieldset id="language-selection">
+                <legend>Language</legend>
+                <label>
+                    German
+                    <input type="checkbox" name="language" value="de-DE-ConradNeural">
+                </label>
+                <label>
+                    Japanese
+                    <input type="checkbox" name="language" value="ja-JP-NanamiNeural">
+                </label>
+                <label>
+                    Chinese
+                    <input type="checkbox" name="language" disabled>
+                </label>
+            </fieldset>
+            <label>
+                From 1 to:
+                <input type="number" name="up-to-number" id="up-to-number" value="100000">
+            </label>
+
+            <input id="generate-new-number" type="button" value="Generate New Number">
+
+            <h2 id="number-display"></h2>
+
+            <input id="reveal-number" type="button" value="Reveal Number" disabled>
+            <input id="speak-number" type="button" value="Speak Number" disabled>
+
+            <div id="response-message"></div>
+        </div>
+
+        <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+        <script src="synthesizeSpeech.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

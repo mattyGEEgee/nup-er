@@ -1,6 +1,22 @@
-#language-selection {
+#app {
+    /* width: 400px; */
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#app > * {
+    margin: 1rem
+}
+
+input[type="button"] {
+    height: 3rem;
+}
+
+#language-selection > * {
+    padding: 0 2ch
 }
 
 #response-message {

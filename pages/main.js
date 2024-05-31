@@ -1,5 +1,6 @@
 const numberDisplay = document.querySelector('#number-display')
 const upToInput = document.querySelector('#up-to-number')
+const languageFieldset = document.querySelector('#language-selection')
 const languageSelection = document.querySelectorAll('input[name="language"]')
 const generateNewNumberButton = document.querySelector('#generate-new-number')
 const revealNumberButton = document.querySelector('#reveal-number')
@@ -8,6 +9,10 @@ const responseMessageArea = document.querySelector("#response-message")
 let number
 let upTo
 let language
+
+languageFieldset.addEventListener('click', (event) => {
+    console.log(event);
+})
 
 function ChooseLanguage() {
     let checked = []
@@ -18,9 +23,10 @@ function ChooseLanguage() {
     })
     if (checked.length == 1){
         language = checked[0]
+    } else {
+        let randomLanguage = Math.floor(Math.random() * checked.length)
+        language = checked[randomLanguage]
     }
-    let randomLanguage = Math.floor(Math.random() * checked.length)
-    language = checked[randomLanguage]
 }
 
 generateNewNumberButton.addEventListener('click', () => {

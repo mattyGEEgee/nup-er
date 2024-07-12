@@ -10,10 +10,6 @@ let number
 let upTo
 let language
 
-languageFieldset.addEventListener('click', (event) => {
-    console.log(event);
-})
-
 function ChooseLanguage() {
     let checked = []
     languageSelection.forEach((checkbox)=> {
